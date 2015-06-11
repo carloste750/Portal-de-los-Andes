@@ -50,13 +50,26 @@
 				echo "No se pudo Eliminar";
 			}
 		}
+		/*la siguiente funcion permite realizar un eliminado con codigo personalizado*/
+		public function EliminarDatosPers($entidad,$campoid,$campoest,$condicion){
+			$res=mysql_query("update  $entidad set $campoest=0 where $condicion");
+			print("update  $entidad set $campoest='0' where $campoid='$id'");
+			if ($res=1){
+				echo "Eliminado Correctamente";
+			}else{
+				echo "No se pudo Eliminar";
+			}
+		}
 		public function ListarDatosBusqueda($entidad,$campos,$camposfiltro,$criterio,$nestado){
 			echo "select $campos from $entidad where $camposfiltro like '%$criterio%'";
 			return mysql_query("select $campos from $entidad where $camposfiltro like '%$criterio%' and $nestado='1'");
 		}
+		public function ListarDatosBusquedaNoEstado($entidad,$campos,$camposfiltro,$criterio){
+			return mysql_query("select $campos from $entidad where $camposfiltro like '%$criterio%'");
+		}
 		public function Obtener($tabla,$campo,$id){
 			echo "select * $tabla from  where $campo =$id";
-			return mysql_query("select *  from $tabla  where $campo =$id");
+			return mysql_query("select *  from $tabla  where $campo =$id ");
 
 		}
 	}

@@ -10,7 +10,7 @@ class NivelAcceso_EL
 	private $_mensaje;
 	private $_fecha;
 	private $_idhorario;
-	
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -31,19 +31,25 @@ class NivelAcceso_EL
 	public  function idhorario(){
 		return $this->_idhorario;
 	}
+	public  function est(){
+		return $this->_est;
+	}
 
 
-	public  function idcarta($valor){
+	public  function sidcarta($valor){
 		$this->_idcarta=$valor;
 	}
-	public  function mensaje($valor){
+	public  function smensaje($valor){
 		$this->_mensaje=$valor;
 	}
-	public  function fecha($valor){
+	public  function sfecha($valor){
 		$this->_fecha=$valor;
 	}
-	public  function idhorario(){
-		return $this->_idhorario;
+	public  function sidhorario($valor){
+		$this->_idhorario=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 	
 	

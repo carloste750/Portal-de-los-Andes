@@ -17,7 +17,7 @@ class Cliente_EL
 	private $_contrasenia;
 	private $_idsucursal;
 	private $_idtipoempleado;
-
+	private $_est;
 	//Constructor
 	function __construct()
 	{
@@ -58,42 +58,47 @@ class Cliente_EL
 	public  function idtipoempleado(){
 		return $this->_idtipoempleado;
 	}
+	public  function est(){
+		return $this->_est;
+	}
 
 
 
-
-	public  function idempleado($valor){
+	public  function sidempleado($valor){
 		$this->_idempleado=$valor;
 	}
-	public  function nombre($valor){
+	public  function snombre($valor){
 		$this->_nombre=$valor;
 	}
-	public  function apellido($valor){
+	public  function sapellido($valor){
 		$this->_apellido=$valor;
 	}
-	public  function dni($valor){
+	public  function sdni($valor){
 		$this->_dni=$valor;
 	}
-	public  function direccion($valor){
+	public  function sdireccion($valor){
 		$this->_direccion=$valor;
 	}
-	public  function telefono($valor){
+	public  function stelefono($valor){
 		$this->_telefono=$valor;
 	}
-	public  function email($valor){
+	public  function semail($valor){
 		$this->_email=$valor;
 	}
-	public  function usuario($valor){
+	public  function susuario($valor){
 		$this->_usuario=$valor;
 	}
-	public  function contrasenia($valor){
+	public  function scontrasenia($valor){
 		$this->_contrasenia=$valor;
 	}
-	public  function idsucursal($valor){
+	public  function sidsucursal($valor){
 		$this->_idsucursal=$valor;
 	}
-	public  function idtipoempleado($valor){
+	public  function sidtipoempleado($valor){
 		$this->_idtipoempleado=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 	
 }

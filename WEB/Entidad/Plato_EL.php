@@ -12,7 +12,7 @@ class Plato_EL
 	private $_costo;
 	private $_imagen;
 	private $_idcategoria;
-
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -39,25 +39,31 @@ class Plato_EL
 	public  function idcategoria(){
 		return $this->_idcategoria;
 	}
+	public  function est(){
+		return $this->_est;
+	}
 
 
-	public  function idplato($valor){
+	public  function sidplato($valor){
 		$this->_idplato=$valor;
 	}
-	public  function nombre($valor){
+	public  function snombre($valor){
 		$this->_nombre=$valor;
 	}
-	public  function descripcion($valor){
+	public  function sdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
-	public  function costo($valor){
+	public  function scosto($valor){
 		$this->_costo=$valor;
 	}
-	public  function imagen($valor){
+	public  function simagen($valor){
 		$this->_imagen=$valor;
 	}
-	public  function idcategoria($valor){
+	public  function sidcategoria($valor){
 		$this->_idcategoria=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 }
  ?>

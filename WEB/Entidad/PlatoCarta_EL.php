@@ -25,10 +25,10 @@ class Informacion_EL
 	}
 	
 
-	public  function idplato($valor){
+	public  function sidplato($valor){
 		$this->_idplato=$valor;
 	}
-	public  function idcarta($valor){
+	public  function sidcarta($valor){
 		$this->_idcarta=$valor;
 	}
 

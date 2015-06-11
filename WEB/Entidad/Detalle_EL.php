@@ -9,7 +9,7 @@ class Detalle_EL
 	private $_iddetalle;
 	private $_nombre;
 	private $_descripcion;
-	
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -27,17 +27,23 @@ class Detalle_EL
 	public  function descripcion(){
 		return $this->_descripcion;
 	}
+	public  function est(){
+		return $this->_est;
+	}
 	
 
 
-	public  function iddetalle($valor){
+	public  function siddetalle($valor){
 		$this->_iddetalle=$valor;
 	}
-	public  function nombre($valor){
+	public  function snombre($valor){
 		$this->_nombre=$valor;
 	}
-	public  function descripcion($valor){
+	public  function sdescripcion($valor){
 		$this->_descripcion=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 	
 	

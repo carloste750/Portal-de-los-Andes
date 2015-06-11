@@ -11,7 +11,7 @@ class Informacion_EL
 	private $_horainicio;
 	private $_fechafin;
 	private $_horafin;
-	
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -35,22 +35,28 @@ class Informacion_EL
 	public  function horafin(){
 		return $this->_horafin;
 	}
-	
+	public  function est(){
+		return $this->_est;
+	}
 
-	public  function idsesion($valor){
+
+	public  function sidsesion($valor){
 		$this->_idsesion=$valor;
 	}
-	public  function fechainicio($valor){
+	public  function sfechainicio($valor){
 		$this->_fechainicio=$valor;
 	}
-	public  function horainicio($valor){
+	public  function shorainicio($valor){
 		$this->_horainicio=$valor;
 	}
-	public  function fechafin($valor){
+	public  function sfechafin($valor){
 		$this->_fechafin=$valor;
 	}
-	public  function horafin($valor){
+	public  function shorafin($valor){
 		$this->_horafin=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 }
  ?>

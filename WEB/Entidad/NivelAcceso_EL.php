@@ -9,7 +9,7 @@ class NivelAcceso_EL
 	private $_idnivel;
 	private $_nombre;
 	private $_descripcion;
-	
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -27,16 +27,23 @@ class NivelAcceso_EL
 	public  function descripcion(){
 		return $this->_descripcion;
 	}
+	public  function est(){
+		return $this->_est;
+	}
 
 
-	public  function idnivel($valor){
+
+	public  function sidnivel($valor){
 		$this->_idnivel=$valor;
 	}
-	public  function nombre($valor){
+	public  function snombre($valor){
 		$this->_nombre=$valor;
 	}
-	public  function descripcion($valor){
+	public  function sdescripcion($valor){
 		$this->_descripcion=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 	
 	

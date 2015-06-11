@@ -9,6 +9,7 @@ class TipoEmpleado_EL
 	private $_idtipoempleado;
 	private $_descripcion;
 	private $_idnivelacceso;
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -26,22 +27,23 @@ class TipoEmpleado_EL
 	public  function idnivelacceso(){
 		return $this->_idnivelacceso;
 	}
-	
-	
+	public  function est(){
+		return $this->_est;
+	}
 
-
-
-
-	public  function idtipoempleado($valor){
+	public  function sidtipoempleado($valor){
 		$this->_idtipoempleado=$valor;
 	}
-	public  function descripcion($valor){
+	public  function sdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
-	public  function idnivelacceso($valor){
+	public  function sidnivelacceso($valor){
 		$this->_idnivelacceso=$valor;
 	}
-	
+	public  function sest($valor){
+		$this->_est=$valor;
+	}
+}
 	
 }
  ?>

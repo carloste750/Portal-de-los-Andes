@@ -2,11 +2,11 @@
 /**
 * Code By CJ
 */
-class Pedido_EL 
+class Reservacion_EL 
 {
 	
 	//Atributos
-	private $_idpedido;
+	private $_idreservacion;
 	private $_estado;
 	private $_fecha;
 	private $_hora;
@@ -16,16 +16,16 @@ class Pedido_EL
 	private $_descripcion;
 	private $_idcliente;
 	private $_idsucursal;
+	private $_est;
 
 	//Constructor
 	function __construct()
 	{
 		
 	}
-	
 	//Metodos GET y SET
-	public  function idpedido(){
-		return $this->_idpedido;
+	public  function idreservacion(){
+		return $this->_idreservacion;
 	}
 	public  function estado(){
 		return $this->_estado;
@@ -54,39 +54,44 @@ class Pedido_EL
 	public  function idsucursal(){
 		return $this->_idsucursal;
 	}
-
-
-
-
-	public  function idpedido($valor){
-		$this->_idpedido=$valor;
+	public  function est(){
+		return $this->_est;
 	}
-	public  function estado($valor){
+
+
+
+	public  function sidreservacion($valor){
+		$this->_idreservacion=$valor;
+	}
+	public  function sestado($valor){
 		$this->_estado=$valor;
 	}
-	public  function fecha($valor){
+	public  function sfecha($valor){
 		$this->_fecha=$valor;
 	}
-	public  function hora($valor){
+	public  function shora($valor){
 		$this->_hora=$valor;
 	}
-	public  function costototal($valor){
+	public  function scostototal($valor){
 		$this->_costototal=$valor;
 	}
-	public  function fechaconsumo($valor){
+	public  function sfechaconsumo($valor){
 		$this->_fechaconsumo=$valor;
 	}
-	public  function horaconsumo($valor){
+	public  function shoraconsumo($valor){
 		$this->_horaconsumo=$valor;
 	}
-	public  function descripcion($valor){
+	public  function sdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
-	public  function idcliente($valor){
+	public  function sidcliente($valor){
 		$this->_idcliente=$valor;
 	}
-	public  function idsucursal($valor){
+	public  function sidsucursal($valor){
 		$this->_idsucursal=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 
 }

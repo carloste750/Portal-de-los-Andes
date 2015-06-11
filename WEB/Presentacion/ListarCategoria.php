@@ -13,7 +13,6 @@
 	if($_GET["accion"]=="all"){
 		$valores=$OCategoria_BL->ListaCategoria("");
 	}
-
 ?>
 <html>
 	<?php include('./Templates/tmpHead.php') ?> 

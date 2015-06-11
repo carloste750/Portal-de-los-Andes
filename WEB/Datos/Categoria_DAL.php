@@ -1,6 +1,6 @@
 <?php 
 	/**
-	* 
+	*Code by CJ
 	*/
 	include_once 'GestionDatos.php';
 
@@ -48,7 +48,9 @@
 			return $this->GD->ListarDatosBusqueda($entidad,$campos,$camposfiltro,$Criterio,$nestado);
 		}
 		public function Obtener_Categoria($id){
-			return $this->GD->Obtener("categoria","idcategoria",$id);
+			$entidad="categoria";
+			$campoid="idcategoria";
+			return $this->GD->Obtener($entidad,$campoid,$id);
 		}
 	}
  ?>

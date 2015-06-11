@@ -8,7 +8,7 @@ class Categoria_EL
 	private $_idcategoria="";
 	private $_nombre="";
 	private $_descripcion="";
-
+	private $_est;
 	//Constructor
 	function __construct()
 	{
@@ -25,6 +25,9 @@ class Categoria_EL
 	public function descripcion(){
 		return $this->_descripcion;
 	}
+	public  function est(){
+		return $this->_est;
+	}
 
 
 	
@@ -37,6 +40,10 @@ class Categoria_EL
 	public function sdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
+	public  function est($valor){
+		$this->_est=$valor;
+	}
+	
 
 }
 

@@ -11,6 +11,7 @@ class Horario_EL
 	private $_descripcion;
 	private $_horainicio;
 	private $_horafin;
+	private $_est
 
 	//Constructor
 	function __construct()
@@ -34,24 +35,29 @@ class Horario_EL
 	public  function horafin(){
 		return $this->_horafin;
 	}
-
-
-	public  function idhorario($valor){
-		$this->_idhorario=$valor;
-	}
-	public  function nombre($valor){
-		$this->_nombre=$valor;
-	}
-	public  function descripcion($valor){
-		$this->_descripcion=$valor;
-	}
-	public  function horainicio($valor){
-		$this->_horainicio=$valor;
-	}
-	public  function horafin($valor){
-		$this->_horafin=$valor;
+	public  function est(){
+		return $this->_est;
 	}
 	
+
+	public  function sidhorario($valor){
+		$this->_idhorario=$valor;
+	}
+	public  function snombre($valor){
+		$this->_nombre=$valor;
+	}
+	public  function sdescripcion($valor){
+		$this->_descripcion=$valor;
+	}
+	public  function shorainicio($valor){
+		$this->_horainicio=$valor;
+	}
+	public  function shorafin($valor){
+		$this->_horafin=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
+	}
 	
 	
 }

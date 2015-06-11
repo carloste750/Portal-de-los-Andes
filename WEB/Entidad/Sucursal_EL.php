@@ -9,6 +9,7 @@ class Sucursal_EL
 	private $_idsucursal;
 	private $_imagen;
 	private $_direccion;
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -26,17 +27,22 @@ class Sucursal_EL
 	public  function descripcion(){
 		return $this->_descripcion;
 	}
+	public  function est(){
+		return $this->_est;
+	}
 
 
-
-	public  function idsucursal($valor){
+	public  function sidsucursal($valor){
 		$this->_idsucursal=$valor;
 	}
-	public  function imagen($valor){
+	public  function simagen($valor){
 		$this->_imagen=$valor;
 	}
-	public  function direccion($valor){
+	public  function sdireccion($valor){
 		$this->_direccion=$valor;
+	}
+	public  function sest($valor){
+		$this->_est=$valor;
 	}
 }
  ?>

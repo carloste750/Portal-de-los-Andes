@@ -2,12 +2,12 @@
 /**
 * 
 */
-class CategoriaEL 
+class Categoria_EL 
 {
 	//Atributos
-	private $_idcategoria;
-	private $_nombre;
-	private $_descripcion;
+	private $_idcategoria="";
+	private $_nombre="";
+	private $_descripcion="";
 
 	//Constructor
 	function __construct()
@@ -28,13 +28,13 @@ class CategoriaEL
 
 
 	
-	public function idcategoria($valor){
+	public function sidcategoria($valor){
 		$this->_idcategoria=$valor;
 	}
-	public function nombre($valor){
+	public function snombre($valor){
 		$this->_nombre=$valor;
 	}
-	public function descripcion($valor){
+	public function sdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
 

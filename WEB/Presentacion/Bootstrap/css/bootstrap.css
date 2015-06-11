@@ -1582,6 +1582,7 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
   min-width: 320px;
+
 }
 @media (min-width: 768px) {
   .container {
@@ -3132,9 +3133,12 @@ fieldset[disabled] .btn-primary.active {
   background-color: #ffffff;
 }
 .btn-success {
-  color: #ffffff;
+  color: #333;
   background-color: #ffffff;
   border-color: #f2f2f2;
+  box-shadow: 0px 0px 2px #000;
+  transition:all 0.5s;
+  border-radius: 8px;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -3143,8 +3147,10 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #e6e6e6;
+  background-color: #2ECC71;
   border-color: #d4d4d4;
+  border-bottom: 2px solid #eee;
+  box-shadow: 0px 0px 8px #000;
 }
 .btn-success:active,
 .btn-success.active,
@@ -4235,6 +4241,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
   text-shadow: 0px 2px 3px #111;
+
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -4257,8 +4264,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-nav .open .dropdown-menu > li > a:focus {
     background-image: none;
-    
-    box-shadow: 0px 2px 3px #111;
+    color:  #333;
+    background-color: inherit;
   }
 }
 @media (min-width: 768px) {

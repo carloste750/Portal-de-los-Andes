@@ -23,21 +23,41 @@
 			}
 		}
 
-		public function GrabarDatos($entidad,$campos,$valores){
-			$res=mysql_query("insert into ".$entidad."(".$campos.") values (".$valores.")");
-			print("insert into ".$entidad."(".$campos.") values (".$valores.")");
+		public function GrabarDatos($entidad,$campos,$atributos){
+			$res=mysql_query("insert into $entidad($campos) values ($atributos)");
+			print("insert into $entidad($campos) values ($atributos)");
 			if ($res=1){
 				echo "Guardado Correctamente";
 			}else{
 				echo "No se pudo Guardar";
 			}
 		}
-		public function ListarDatosBusqueda($entidad,$campos,$camposfiltro,$criterio){
-			echo "select $campos from $entidad where $camposfiltro like '%$criterio%'";
-			return mysql_query("select $campos from $entidad where $camposfiltro like '%$criterio%'");
+		public function ModificarDatos($entidad,$campos,$condicion){
+			$res=mysql_query("update  $entidad set $campos where $condicion");
+			print("update  $entidad set $campos where $condicion");
+			if ($res=1){
+				echo "Actualizado Correctamente";
+			}else{
+				echo "No se pudo Actualizar";
+			}
 		}
-		public function Obtener($campo,$id){
-			return mysql_query("select * from  where $campo =$id");
+		public function EliminarDatos($entidad,$campoid,$campoest,$id){
+			$res=mysql_query("update  $entidad set $campoest=0 where $campoid='$id'");
+			print("update  $entidad set $campoest='0' where $campoid='$id'");
+			if ($res=1){
+				echo "Eliminado Correctamente";
+			}else{
+				echo "No se pudo Eliminar";
+			}
+		}
+		public function ListarDatosBusqueda($entidad,$campos,$camposfiltro,$criterio,$nestado){
+			echo "select $campos from $entidad where $camposfiltro like '%$criterio%'";
+			return mysql_query("select $campos from $entidad where $camposfiltro like '%$criterio%' and $nestado='1'");
+		}
+		public function Obtener($tabla,$campo,$id){
+			echo "select * $tabla from  where $campo =$id";
+			return mysql_query("select *  from $tabla  where $campo =$id");
+
 		}
 	}
  ?>

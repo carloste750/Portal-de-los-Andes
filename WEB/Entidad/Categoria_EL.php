@@ -40,7 +40,7 @@ class Categoria_EL
 	public function sdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
-	public  function est($valor){
+	public  function sest($valor){
 		$this->_est=$valor;
 	}
 	

@@ -2,7 +2,7 @@
 /**
 * Code By CJ
 */
-class Cliente_EL 
+class Empleado_EL 
 {
 	
 	//Atributos

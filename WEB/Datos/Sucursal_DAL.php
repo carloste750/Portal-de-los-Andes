@@ -44,7 +44,7 @@
 		}
 		public function Lista_Sucursal($Criterio){
 			$entidad="Sucursal";
-			$campos="imagen_Sucursal,
+			$campos="idsucursal,imagen_Sucursal,
 				direccion_Sucursal		
 				";
 			$camposfiltro="direccion_Sucursal";

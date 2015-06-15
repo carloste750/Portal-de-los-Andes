@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Portal de los Andes</title>
-	<link rel="stylesheet" type="text/css" href="./Bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./css/Estilos.css">
-	<script  type="text/javascript" src="./Bootstrap/js/jquery.js"></script>
-	<script type="text/javascript" src="./Bootstrap/js/bootstrap.js"></script>
-	
-	<meta charset="UTF-8">
-</head>
+	<?php include('./Templates/tmpHead.php') ?> 
 <body class="container fuente1">
 
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<header >
-		<div class="row">
-			<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-				<img href="Index.html" class="logo" src="./Imagenes/Logo.png">
+	<?php include('./Templates/tmpHeader.php') ?> 
+	<content class="container contenido">
+		<br>
+		<div>
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Reservacion</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
+				<hr>
+			</div>
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Carta</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
+				<hr>
+			</div>
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Plato</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
+				<hr>
+			</div>
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Categoria</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php?mensaje=">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
+				<hr>
+			</div>
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Cliente</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
+				<hr>
+			</div>
+
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Sucursal</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoSucursal.php">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarSucursal.php?accion=all">Listar</a>
+				<hr>
+			</div>
+
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Empleado</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoEmpleado.php?mensaje=&accion=all">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarEmpleado.php?accion=all">Listar</a>
+				<hr>
 			</div>
 			
-			<div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
-				<h2 class="fuente2 sombra-text-3 nounderline deslizar" ><a class="titulo" href="Index.html">Portal de los Ándes</a></h2>
-				<h3 class="fuente3 sombra-text-2 deslizar">No es la comida, es nuestro sabor!</h3>
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Nivel de Acceso</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoNivelAcceso.php?mensaje=&accion=all">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarNivelAcceso.php?accion=all">Listar</a>
+				<hr>
 			</div>
-		</div>
 
-		<div class="col-md-12 col-lg-12 adecuar barra">
-			<nav class="navbar fuente1 ">
-				  <div class="container-fluid">
-
-				    <div class="navbar-header">
-				      <button type="button " class="navbar-toggle collapsed fondo-Blanco" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				        <span class="sr-only fondo-Plomo">Navegacion</span>
-				        <span class="icon-bar fondo-Plomo"></span>
-				        <span class="icon-bar fondo-Plomo"></span>
-				        <span class="icon-bar fondo-Plomo"></span>
-				      </button>
-				      <a class="navbar-brand" href="Index.html">Inicio</a>
-				    </div>
-
-
-				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				      <ul class="nav navbar-nav">
-				        <li class="active "><a href="sucursales.html">Sucursales <span class="sr-only">(current)</span></a></li>
-				        <li><a href="carta.html">Carta</a></li>
-				        
-				      </ul>
-				      
-				      <ul class="nav navbar-nav navbar-right">
-				      	<li><a href="Nosotros.html">Nosotros</a></li>
-				        <li><a href="contactanos.html">Contáctanos  </a></li>
-				      </ul>
-				    </div>
-				  </div>
-			</nav>
-		</div>
-	</header>
-	<content >
-		<div>
-			<div>
-				<h2>Categoria</h2>
-				<a href="NuevoCategoria.html">Nuevo</a>
-				<a href="ListarCategoria.php?accion=all">Listar</a>
+			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
+				<h2 class="btn-success">Tipo de Empleado</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoTipoEmpleado.php?mensaje=&accion=all">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarTipoEmpleado.php?accion=all">Listar</a>
+				<hr>
 			</div>
+
+			
+
 		</div>
 	</content>
 

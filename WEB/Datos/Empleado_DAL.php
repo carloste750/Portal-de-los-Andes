@@ -21,9 +21,9 @@
 				telefono_Empleado,
 				email_Empleado,
 				usuario_Empleado,
-				contrasenia_Empleado,
+				contraseña_Empleado,
 				idsucursal,
-				idtipoempleado
+				idtipo
 				"
 			;
 			$atributos="'".$valor->nombre()."',
@@ -32,8 +32,8 @@
 				'".$valor->direccion()."',
 				'".$valor->telefono()."',
 				'".$valor->email()."',
-				'".$valor->usuario."',
-				'".$valor->contraseña()."',
+				'".$valor->usuario()."',
+				'".$valor->contrasenia()."',
 				'".$valor->idsucursal()."',
 				'".$valor->idtipoempleado()."'
 				"
@@ -52,9 +52,9 @@
 					"telefono_Empleado='".$valor->telefono()."',".
 					"email_Empleado='".$valor->email()."',".
 					"usuario_Empleado='".$valor->usuario()."',".
-					"contrasenia_Empleado='".$valor->contrasenia()."',".
+					"contraseña_Empleado='".$valor->contrasenia()."',".
 					"idsucursal='".$valor->idsucursal()."',".
-					"idtipoempleado='".$valor->idtipoempleado()."'"
+					"idtipo='".$valor->idtipoempleado()."'"
 			;
 			return $this->GD->ModificarDatos($entidad,$campos,$condicion);
 
@@ -68,18 +68,17 @@
 		}
 		public function Lista_Empleado($Criterio){
 			$entidad="Empleado";
-			$campos="nombre_Empleado,
+			$campos="idEmpleado,nombre_Empleado,
 				apellido_Empleado,
 				dni_Empleado,
 				direccion_Empleado,
 				telefono_Empleado,
 				email_Empleado,
 				usuario_Empleado,
-				contrasenia_Empleado,
 				idsucursal,
-				idtipoempleado		
+				idtipo		
 				";
-			$camposfiltro="dni_Empleado,nombre_Empleado,apellido_Empleado";
+			$camposfiltro="dni_Empleado or nombre_Empleado or apellido_Empleado";
 			$nestado="est_Empleado";
 			return $this->GD->ListarDatosBusqueda($entidad,$campos,$camposfiltro,$Criterio,$nestado);
 		}

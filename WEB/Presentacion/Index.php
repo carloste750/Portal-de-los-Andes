@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 	<?php include('./Templates/tmpHead.php') ?> 
 
-<body class="container fuente1">
+<body class="container contenido fuente1">
 	
 	<?php include('./Templates/tmpHeader.php') ?> 
 
 	<content >
-		<div id="slide" class="carousel slide ">
+		<div id="slide" class="carousel slide clearfix ">
 			<ol class="carousel-indicators">
 				<li data-target="#slide" data-slide-to="0" class="active"></li>
 				<li data-target="#slide" data-slide-to="1"></li>

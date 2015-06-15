@@ -68,7 +68,7 @@
 			return mysql_query("select $campos from $entidad where $camposfiltro like '%$criterio%'");
 		}
 		public function Obtener($tabla,$campo,$id){
-			echo "select * $tabla from  where $campo =$id";
+			echo "select * from $tabla   where $campo =$id";
 			return mysql_query("select *  from $tabla  where $campo =$id ");
 
 		}

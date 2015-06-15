@@ -1,6 +1,7 @@
 body{
 	cursor:url("cursor.png") !important;
 	transition-duration: 1s;
+	
 }
 
 @font-face {
@@ -23,8 +24,7 @@ body{
 	background-color: #333;
 }
 .contenido{
-	
-	min-height: 500px;
+	min-height: 600px !important;
 }
 .deslizar{
 	-moz-animation-duration: 3s;
@@ -163,7 +163,6 @@ table thead{
 }
 .fondo-Plomo{
 	background-color: #333 !important;
-	height: 100%;
 	width: 100%;
 }
 .centrar{
@@ -187,6 +186,9 @@ table thead{
 }
 .cceleste{
 
+}
+.camarillo{
+	color: #F7DA64;
 }
 
 .beliminar{

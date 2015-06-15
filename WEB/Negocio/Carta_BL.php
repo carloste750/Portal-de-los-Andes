@@ -31,8 +31,9 @@
 		}
 		public function GuardarCarta(){
 			$OCartaEL=new Carta_EL();
-			$OCartaEL->snombre($_POST["txtNombre"]);
-			$OCartaEL->sdescripcion($_POST["txtDescripcion"]);
+			$OCartaEL->smensaje($_POST["nodefine"]);
+			$OCartaEL->sfecha($_POST["nodefine"]);
+			$OCartaEL->sidhorario($_POST["nodefine"]);
 
 			$this->OCartaDAL->Guardar_Carta($OCartaEL);
 				
@@ -40,15 +41,13 @@
 		public function ModificarCarta($id){
 			$OCartaEL=new Carta_EL();
 			$OCartaEL->sidcarta($id);
-			$OCartaEL->snombre($_POST["txtNombre"]);
-			$OCartaEL->sdescripcion($_POST["txtDescripcion"]);
-
+			$OCartaEL->smensaje($_POST["nodefine"]);
+			$OCartaEL->sfecha($_POST["nodefine"]);
+			$OCartaEL->sidhorario($_POST["nodefine"]);
 			$this->OCartaDAL->Modificar_Carta($OCartaEL);
-				
 		}
 		public function EliminarCarta($id){
 			$this->OCartaDAL->Eliminar_Carta($id);
-				
 		}
 
 		public function ListaCarta($criterio){
@@ -58,7 +57,5 @@
 			return $this->OCartaDAL->Obtener_Carta($id);
 		}
 	}
-
-
 
 ?>

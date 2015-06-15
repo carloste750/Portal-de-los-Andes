@@ -14,11 +14,11 @@
 		public function Guardar_TipoEmpleado($valor){
 			$entidad="Tipo_Empleado";
 
-			$campos="descripcion_TipoEmpleado
+			$campos="descripcion_tipo,idnivel
 				"
 			;
-			$atributos="'".$valor->descripcion()."'
-				"
+			$atributos="'".$valor->descripcion()."','".
+			$valor->idnivelacceso()."'"
 			;
 			
 			return $this->GD->GrabarDatos($entidad,$campos,$atributos);
@@ -26,30 +26,31 @@
 		}
 		public function Modificar_TipoEmpleado($valor){
 			$entidad="Tipo_Empleado";
-			$condicion="idTipoEmpleado='".$valor->idTipoEmpleado()."'";
-			$campos="descripcion='".$valor->descripcion()."'"
+			$condicion="idTipo='".$valor->idtipo()."'";
+			$campos="descripcion_tipo='".$valor->descripcion()."',
+				idnivel='".$valor->idnivelacceso()."'"
 			;
 			return $this->GD->ModificarDatos($entidad,$campos,$condicion);
 
 		}
 		public function Eliminar_TipoEmpleado($id){
 			$entidad="Tipo_Empleado";
-			$campoid="idTipoEmpleado";
+			$campoid="idTipo";
 			$campoest="est_Tipo";
 			return $this->GD->EliminarDatos($entidad,$campoid,$campoest,$id);
 
 		}
 		public function Lista_TipoEmpleado($Criterio){
 			$entidad="Tipo_Empleado";
-			$campos="descripcion	
+			$campos="idtipo,descripcion_tipo,idnivel	
 				";
-			$camposfiltro="descripcion";
+			$camposfiltro="descripcion_tipo";
 			$nestado="est_Tipo";
 			return $this->GD->ListarDatosBusqueda($entidad,$campos,$camposfiltro,$Criterio,$nestado);
 		}
 		public function Obtener_TipoEmpleado($id){
 			$entidad="Tipo_Empleado";
-			$campoid="idTipoEmpleado";
+			$campoid="idTipo";
 			return $this->GD->Obtener($entidad,$campoid,$id);
 		}
 	}

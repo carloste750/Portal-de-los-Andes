@@ -24,8 +24,8 @@ class Sucursal_EL
 	public  function imagen(){
 		return $this->_imagen;
 	}
-	public  function descripcion(){
-		return $this->_descripcion;
+	public  function direccion(){
+		return $this->_direccion;
 	}
 	public  function est(){
 		return $this->_est;

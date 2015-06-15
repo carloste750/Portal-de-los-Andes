@@ -14,10 +14,7 @@
 		public function Guardar_Carta($valor){
 			$entidad="carta";
 
-			$campos="mensaje_carta,
-				fecha_carta,
-				idhorario"
-			;
+			$campos="mensaje_carta,fecha_carta,idhorario";
 
 			$atributos="'".$valor->mensaje()."',
 				'".$valor->fecha()."',

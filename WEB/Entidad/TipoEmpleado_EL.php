@@ -6,7 +6,7 @@ class TipoEmpleado_EL
 {
 	
 	//Atributos
-	private $_idtipoempleado;
+	private $_idtipo;
 	private $_descripcion;
 	private $_idnivelacceso;
 	private $_est;
@@ -18,8 +18,8 @@ class TipoEmpleado_EL
 	}
 	
 	//Metodos GET y SET
-	public  function idtipoempleado(){
-		return $this->_idtipoempleado;
+	public  function idtipo(){
+		return $this->_idtipo;
 	}
 	public  function descripcion(){
 		return $this->_descripcion;
@@ -31,8 +31,8 @@ class TipoEmpleado_EL
 		return $this->_est;
 	}
 
-	public  function sidtipoempleado($valor){
-		$this->_idtipoempleado=$valor;
+	public  function sidtipo($valor){
+		$this->_idtipo=$valor;
 	}
 	public  function sdescripcion($valor){
 		$this->_descripcion=$valor;
@@ -45,5 +45,4 @@ class TipoEmpleado_EL
 	}
 }
 	
-}
- ?>
+?>

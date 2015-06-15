@@ -1,6 +1,6 @@
 <?php 
 	/**
-	* 
+	* Code by CJ
 	*/
 	include_once '../Datos/Categoria_DAL.php';
 	include_once '../Entidad/Categoria_EL.php';
@@ -15,13 +15,9 @@
 		}
 		if($_GET["accion"]=='Eliminar'){
 			$OCategoria_BL->EliminarCategoria($_GET["id"]);
-			
 		}
 	}
 
-	/**
-	* 
-	*/
 	 class Categoria_BL 
 	{
 		var $OCategoriaDAL;
@@ -34,21 +30,31 @@
 			$OCategoriaEL->snombre($_POST["txtNombre"]);
 			$OCategoriaEL->sdescripcion($_POST["txtDescripcion"]);
 
-			$this->OCategoriaDAL->Guardar_Categoria($OCategoriaEL);
-				
+			$res=$this->OCategoriaDAL->Guardar_Categoria($OCategoriaEL);
+			if ($res=1){
+				header ("Location: ../Presentacion/NuevoCategoria.php?mensaje=¡Guardado Correcto!");
+			}else{
+				header ("Location: ../Presentacion/NuevoCategoria.php?mensaje=!Error: No pudimos guardar¡");
+			}	
 		}
 		public function ModificarCategoria($id){
 			$OCategoriaEL=new Categoria_EL();
 			$OCategoriaEL->sidcategoria($id);
 			$OCategoriaEL->snombre($_POST["txtNombre"]);
 			$OCategoriaEL->sdescripcion($_POST["txtDescripcion"]);
-
-			$this->OCategoriaDAL->Modificar_Categoria($OCategoriaEL);
+			$res=$this->OCategoriaDAL->Modificar_Categoria($OCategoriaEL);
+			if ($res=1){
+				header ("Location: ../Presentacion/ListarCategoria.php?accion=all");
+			}
+			
 				
 		}
 		public function EliminarCategoria($id){
-			$this->OCategoriaDAL->Eliminar_Categoria($id);
-				
+			$resp=$this->OCategoriaDAL->Eliminar_Categoria($id);
+			if ($res=1){
+				header ("Location: ../Presentacion/ListarCategoria.php?accion=all");
+			}
+			
 		}
 
 		public function ListaCategoria($criterio){

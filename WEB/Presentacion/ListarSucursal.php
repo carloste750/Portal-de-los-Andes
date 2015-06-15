@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <?php 
-	include_once '../Negocio/Categoria_BL.php';
+	include_once '../Negocio/Sucursal_BL.php';
 	$valores;
-	$OCategoria_BL=new Categoria_BL();
+	$OSucursal_BL=new Sucursal_BL();
 	if($_GET["accion"]=="buscar"){
 		if($_POST["txtbuscar"]!=null){
-			$valores=$OCategoria_BL->ListaCategoria($_POST["txtbuscar"]);
+			$valores=$OSucursal_BL->ListaSucursal($_POST["txtbuscar"]);
 		}else{
-			$valores=$OCategoria_BL->ListaCategoria("");
+			$valores=$OSucursal_BL->ListaSucursal("");
 		}
 	}
 	if($_GET["accion"]=="all"){
-		$valores=$OCategoria_BL->ListaCategoria("");
+		$valores=$OSucursal_BL->ListaSucursal("");
 	}
 ?>
 <html>
@@ -23,11 +23,11 @@
 		<br>
 		<?php include('./Templates/tmpAtrasMenu.php') ?> 
 		<div class="registro">
-			<form action="ListarCategoria.php?accion=buscar" method="POST">
+			<form action="ListarSucursal.php?accion=buscar" method="POST">
 				<div class="text-center form-gestion">
 					<div  class="fondo-Plomo text-right">
 						<br>
-							CATEGORIAS
+							Sucursal
 							<input name="txtbuscar" type="text" placeholder="Buscar...">
 							<input name="btnbuscar" type="submit" value="Buscar">
 						<br>
@@ -37,8 +37,8 @@
 					<table class=" centrar table table-hover" border="1" width="100%">
 						<thead>
 							<tr>
-								<th class="text-center" >Nombre Categoria</th>
-								<th class="text-center">Descripcion</th>
+								<th class="text-center" >Imagen Sucursal</th>
+								<th class="text-center">Direccion</th>
 								<th class="text-center">Modificar</th>
 								<th class="text-center">Eliminar</th>
 							</tr>
@@ -47,10 +47,11 @@
 
 							<?php while($fila=mysql_fetch_array($valores)){ ?>
 							<tr class="cnegro fondo-Blanco" height="auto">
-								<td width="25%" ><?=$fila["nombre_categoria"] ?></td>
-								<td ><?=$fila["descripcion_categoria"] ?></td>
-								<td class="modificar"><a href="ModificarCategoria.php?id=<?=$fila["idcategoria"] ?>&accion=none">Modificar</a></td>
-								<td class="eliminar"><a class="beliminar" href="../Negocio/Categoria_BL.php?accion=Eliminar&id=<?=$fila["idcategoria"] ?>">Eliminar</a></td>
+								<td width="25%" ><img width="80px" heigt="70px" src="<?=$fila["imagen_Sucursal"] ?>"></td>
+								<td><?=$fila["direccion_Sucursal"]; ?></td>
+								<td class="modificar"><a href="ModificarSucursal.php?id=XD&accion=none">Modificar</a></td>
+								<td class="eliminar"><a class="beliminar" href="../Negocio/Sucursal_BL.php?accion=Eliminar&id=<?=$fila["idsucursal"] ?>">Eliminar</a></td>
+								<?=$fila["idsucursal"]?>
 							</tr>
 							<?php } ?>
 						</tbody>

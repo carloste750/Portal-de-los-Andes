@@ -25,12 +25,12 @@
 
 		public function GrabarDatos($entidad,$campos,$atributos){
 			$res=mysql_query("insert into $entidad($campos) values ($atributos)");
-			print("insert into $entidad($campos) values ($atributos)");
-			if ($res=1){
+			/*print("insert into $entidad($campos) values ($atributos)");
+			/*if ($res=1){
 				echo "Guardado Correctamente";
 			}else{
 				echo "No se pudo Guardar";
-			}
+			}*/
 		}
 		public function ModificarDatos($entidad,$campos,$condicion){
 			$res=mysql_query("update  $entidad set $campos where $condicion");

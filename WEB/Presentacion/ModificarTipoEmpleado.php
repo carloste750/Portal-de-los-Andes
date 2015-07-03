@@ -52,7 +52,6 @@
 		</div>
 		<br>
 	</content>
-	
 	<?php include('./Templates/tmpFooter.php') ?> 
 </body>
 </html>

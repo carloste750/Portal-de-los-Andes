@@ -42,8 +42,7 @@
 								<th class="text-center">DNI</th>
 								<th class="text-center">E-Mail</th>
 								<th class="text-center">Usuario</th>
-								<th class="text-center">Sucursal</th>
-								<th class="text-center" >Tipo</th>
+								<th class="text-center" >Tipo de Empleado</th>
 								<th class="text-center">Modificar</th>
 								<th class="text-center" >Eliminar</th>
 							</tr>
@@ -57,8 +56,7 @@
 								<td ><?=$fila["dni_Empleado"] ?></td>
 								<td ><?=$fila["email_Empleado"] ?></td>
 								<td ><?=$fila["usuario_Empleado"] ?></td>
-								<td ><?=$fila["idsucursal"] ?></td>
-								<td ><?=$fila["idtipo"] ?></td>
+								<td ><?=$fila["tipo_empleado_idtipoempleado"] ?></td>
 								<td class="modificar"><a href="ModificarEmpleado.php?id=<?=$fila["idEmpleado"] ?>&accion=none">Modificar</a></td>
 								<td class="eliminar"><a class="beliminar" href="../Negocio/Empleado_BL.php?accion=Eliminar&id=<?=$fila["idEmpleado"] ?>">Eliminar</a></td>
 							</tr>

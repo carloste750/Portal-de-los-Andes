@@ -2,17 +2,12 @@
 <html>
 	<?php 
 		include_once '../Negocio/TipoEmpleado_BL.php';
-		include_once '../Negocio/Sucursal_BL.php';
 		include('./Templates/tmpHead.php'); 
 
 		$mensaje=$_GET["mensaje"];	
 		$valortem;
 		$OTipoEmpleado_BL=new TipoEmpleado_BL();
 		$valortem=$OTipoEmpleado_BL->ListaTipoEmpleado("");
-
-		$valorsuc;
-		$OSucursal_BL=new Sucursal_BL();
-		$valorsuc=$OSucursal_BL->ListaSucursal("");
 	?> 
 <body class="container fuente1">
 	
@@ -38,7 +33,7 @@
 						</tr>
 						<tr>
 							<td class="text-right">DNI:</td>
-							<td class="text-left"><input name="txtDni" type="text" placeholder="Ej. Vega Solis" size="20"></td>
+							<td class="text-left"><input name="txtDni" type="text" placeholder="Ej. 69589636" size="20"></td>
 						</tr>
 						<tr>
 							<td class="text-right">Dirección:</td>
@@ -63,23 +58,16 @@
 						<tr>
 							<td class="text-right">Tipo de Empleado:</td>
 							<td class="text-left">
-								<SELECT name="lstNivel">
+								<SELECT name="lstTipoempleado">
 									<?php while($fila=mysql_fetch_array($valortem)){ ?>
-										<option value="<?=$fila["idtipo"] ?>"><?=$fila["descripcion_tipo"] ?></option>
+										<option value="<?=$fila["idtipoempleado"] ?>"><?=$fila["descripcion_tipo"] ?></option>
 									<?php } ?>
 								</SELECT>
+								<a  class="btn-success fuente-Contenido" href="NuevoTipoEmpleado.php?mensaje=&accion=all">Nuevo</a>
+								
 							</td>
 						</tr>
-						<tr>
-							<td class="text-right">Sucursal:</td>
-							<td class="text-left">
-								<SELECT name="lstsucursal">
-									<?php while($fila=mysql_fetch_array($valorsuc)){ ?>
-										<option value="<?=$fila["idsucursal"] ?>"><?=$fila["direccion_Sucursal"] ?></option>
-									<?php } ?>
-								</SELECT>
-							</td>
-						</tr>
+						
 					</table>
 					<br>
 					<input class="btn-success" name="btnAccion" type="submit" value="Grabar">

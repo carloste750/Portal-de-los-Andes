@@ -22,21 +22,18 @@
 				email_Empleado,
 				usuario_Empleado,
 				contraseña_Empleado,
-				idsucursal,
-				idtipo
+				tipo_empleado_idtipoempleado
 				"
 			;
-			$atributos="'".$valor->nombre()."',
-				'".$valor->apellido()."',
-				'".$valor->dni()."',
-				'".$valor->direccion()."',
-				'".$valor->telefono()."',
-				'".$valor->email()."',
-				'".$valor->usuario()."',
-				'".$valor->contrasenia()."',
-				'".$valor->idsucursal()."',
-				'".$valor->idtipoempleado()."'
-				"
+			$atributos="'".$valor->getnombre()."',
+				'".$valor->getapellido()."',
+				'".$valor->getdni()."',
+				'".$valor->getdireccion()."',
+				'".$valor->gettelefono()."',
+				'".$valor->getemail()."',
+				'".$valor->getusuario()."',
+				'".$valor->getcontrasenia()."',
+				'".$valor->getidtipoempleado()."'"
 			;
 			
 			return $this->GD->GrabarDatos($entidad,$campos,$atributos);
@@ -44,17 +41,16 @@
 		}
 		public function Modificar_Empleado($valor){
 			$entidad="Empleado";
-			$condicion="idEmpleado='".$valor->idempleado()."'";
-			$campos="nombre_Empleado='".$valor->nombre()."',".
-					"apellido_Empleado='".$valor->apellido()."',".
-					"dni_Empleado='".$valor->dni()."',".
-					"direccion_Empleado='".$valor->direccion()."',".
-					"telefono_Empleado='".$valor->telefono()."',".
-					"email_Empleado='".$valor->email()."',".
-					"usuario_Empleado='".$valor->usuario()."',".
-					"contraseña_Empleado='".$valor->contrasenia()."',".
-					"idsucursal='".$valor->idsucursal()."',".
-					"idtipo='".$valor->idtipoempleado()."'"
+			$condicion="idEmpleado='".$valor->getidempleado()."'";
+			$campos="nombre_Empleado='".$valor->getnombre()."',".
+					"apellido_Empleado='".$valor->getapellido()."',".
+					"dni_Empleado='".$valor->getdni()."',".
+					"direccion_Empleado='".$valor->getdireccion()."',".
+					"telefono_Empleado='".$valor->gettelefono()."',".
+					"email_Empleado='".$valor->getemail()."',".
+					"usuario_Empleado='".$valor->getusuario()."',".
+					"contraseña_Empleado='".$valor->getcontrasenia()."',".
+					"tipo_empleado_idtipoempleado='".$valor->getidtipoempleado()."'"
 			;
 			return $this->GD->ModificarDatos($entidad,$campos,$condicion);
 
@@ -75,10 +71,10 @@
 				telefono_Empleado,
 				email_Empleado,
 				usuario_Empleado,
-				idsucursal,
-				idtipo		
+				tipo_empleado_idtipoempleado		
 				";
 			$camposfiltro="dni_Empleado or nombre_Empleado or apellido_Empleado";
+			/*Condicion de Or para comparacion de mas de 1*/
 			$nestado="est_Empleado";
 			return $this->GD->ListarDatosBusqueda($entidad,$campos,$camposfiltro,$Criterio,$nestado);
 		}

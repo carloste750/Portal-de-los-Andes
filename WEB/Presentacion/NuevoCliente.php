@@ -55,33 +55,33 @@
 	<content class="col-md-12 contenido">
 		<div>
 			<form action="../Negocio/categoria.php?accion=Grabar" method="POST">
-				<div class="text-center form-gestion">
-					<h2 class="fuente3">INGRESE CLIENTE</h2>
-					<input class="fuente3" name="txtNombre" type="text" placeholder="Nombre Categoria"><br>
-					<input class="fuente3" name="txtDescripcion" type="text" placeholder="Descripcion"><br>
+				<div class="text-center form-gestion fuente5  marco">
+					<h2 class="fuente">Ingresa tus Datos</h2>
 					<hr>
-					<input class="btn-success fuente3" name="btnAccion" type="submit" value="Grabar">
-					<input class="btn-success fuente3" name="btnLimpiar" type="reset" value="Limpiar">
-
-
+					<table border="0" class="centrar fuente5ph ">
+						<tr>
+							<td class="text-right">Nombre:</td>
+							<td class="text-left"><input name="txtNombre" type="text" placeholder="Ej. Carlos." size="25"></td>
+						</tr>
+						<tr>
+							<td class="text-right">Apellidos:</td>
+							<td class="text-left"><input name="txtApellidos" type="text" placeholder="Ej. Vega Solis" size="25"></td>
+						</tr>
+						<tr>
+							<td class="text-right">DNI:</td>
+							<td class="text-left"><input name="txtDni" type="text" placeholder="Ej. Vega Solis" size="20"></td>
+						</tr>
+					</table>
+					<br>
+						<hr>
+						<input class="btn-success " name="btnAccion" type="submit" value="Registrarme">
+						<input class="btn-success " name="btnLimpiar" type="reset" value="Limpiar">
+					
 				</div>
 			</form>
 		</div>
 		<br>
 	</content>
-
-	<footer >
-		<div class="row fuente3 foot">
-			<div class="col-xs-12 sm-xs-8 col-lg-6 col-lg-6">
-				<strong>Portal de los Andes 2015:</strong>
-				<strong>Todos los Derechos reservados</strong>
-				<strong>¿Tienes alguna queja? escribenos a portal@correo.com</strong>
-			</div>
-			<div class="col-xs-12 sm-xs-8 col-lg-6 col-lg-6">
-				<strong>Contactanos</strong>
-			</div>
-		</div>
-		
-	</footer>
+	<?php include('./Templates/tmpFooter.php') ?> 
 </body>
 </html>

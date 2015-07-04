@@ -27,9 +27,7 @@
 		}
 		public function GuardarTipoEmpleado(){
 			$OTipoEmpleadoEL=new TipoEmpleado_EL();
-			$OTipoEmpleadoEL->sdescripcion($_POST["txtDescripcion"]);
-			$OTipoEmpleadoEL->sidnivelacceso($_POST["lstNivel"]);
-
+			$OTipoEmpleadoEL->setdescripcion($_POST["txtDescripcion"]);
 			$res=$this->OTipoEmpleadoDAL->Guardar_TipoEmpleado($OTipoEmpleadoEL);
 			if ($res=1){
 				header ("Location: ../Presentacion/NuevoTipoEmpleado.php?mensaje=¡Guardado Correcto!&accion=all");
@@ -39,9 +37,8 @@
 		}
 		public function ModificarTipoEmpleado($id){
 			$OTipoEmpleadoEL=new TipoEmpleado_EL();
-			$OTipoEmpleadoEL->sidtipo($id);
-			$OTipoEmpleadoEL->sdescripcion($_POST["txtDescripcion"]);
-			$OTipoEmpleadoEL->sidnivelacceso($_POST["lstNivel"]);
+			$OTipoEmpleadoEL->setidtipo($id);
+			$OTipoEmpleadoEL->setdescripcion($_POST["txtDescripcion"]);
 			$res=$this->OTipoEmpleadoDAL->Modificar_TipoEmpleado($OTipoEmpleadoEL);
 			if ($res=1){
 				header ("Location: ../Presentacion/ListarTipoEmpleado.php?accion=all");

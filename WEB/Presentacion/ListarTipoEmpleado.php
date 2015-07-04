@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <?php 
 	include_once '../Negocio/TipoEmpleado_BL.php';
+	/*Alamcenamos en una coleccion valores desde la base de datos*/
 	$valores;
 	$OTipoEmpleado_BL=new TipoEmpleado_BL();
 	if($_GET["accion"]=="buscar"){
+		/*En el caso de que se envie un parametro buscar*/
 		if($_POST["txtbuscar"]!=null){
 			$valores=$OTipoEmpleado_BL->ListaTipoEmpleado($_POST["txtbuscar"]);
 		}else{
@@ -11,6 +13,7 @@
 		}
 	}
 	if($_GET["accion"]=="all"){
+		/*En el caso de que se requiera mostrar todo*/
 		$valores=$OTipoEmpleado_BL->ListaTipoEmpleado("");
 	}
 ?>
@@ -37,20 +40,17 @@
 					<table class=" centrar table table-hover" border="1" width="100%">
 						<thead>
 							<tr>
-								<th class="text-center" >Descripcion Empleado</th>
-								<th class="text-center">Id Nivel</th>
+								<th class="text-center" >Descripcion Tipo de Empleado</th>
 								<th class="text-center">Modificar</th>
 								<th class="text-center">Eliminar</th>
 							</tr>
 						</thead>
 						<tbody>
-
 							<?php while($fila=mysql_fetch_array($valores)){ ?>
 							<tr class="cnegro fondo-Blanco" height="auto">
 								<td width="25%" ><?=$fila["descripcion_tipo"] ?></td>
-								<td ><?=$fila["idnivel"] ?></td>
 								<td class="modificar"><a href="ModificarTipoEmpleado.php?id=<?=$fila["idtipo"] ?>&accion=none">Modificar</a></td>
-								<td class="eliminar"><a class="beliminar" href="../Negocio/TipoEmpleado_BL.php?accion=Eliminar&id=<?=$fila["idtipo"] ?>">Eliminar</a></td>
+								<td class="eliminar"><a class="beliminar" href="../Negocio/TipoEmpleado_BL.php?accion=Eliminar&id=<?=$fila["idtipoempleado"] ?>">Eliminar</a></td>
 							</tr>
 							<?php } ?>
 						</tbody>

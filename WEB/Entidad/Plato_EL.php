@@ -21,48 +21,48 @@ class Plato_EL
 	}
 	
 	//Metodos GET y SET
-	public  function idplato(){
+	public  function getidplato(){
 		return $this->_idplato;
 	}
-	public  function nombre(){
+	public  function getnombre(){
 		return $this->_nombre;
 	}
-	public  function descripcion(){
+	public  function getdescripcion(){
 		return $this->_descripcion;
 	}
-	public  function costo(){
+	public  function getcosto(){
 		return $this->_costo;
 	}
-	public  function imagen(){
+	public  function getimagen(){
 		return $this->_imagen;
 	}
-	public  function idcategoria(){
+	public  function getidcategoria(){
 		return $this->_idcategoria;
 	}
-	public  function est(){
+	public  function getest(){
 		return $this->_est;
 	}
 
 
-	public  function sidplato($valor){
+	public  function setidplato($valor){
 		$this->_idplato=$valor;
 	}
-	public  function snombre($valor){
+	public  function setnombre($valor){
 		$this->_nombre=$valor;
 	}
-	public  function sdescripcion($valor){
+	public  function setdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
-	public  function scosto($valor){
+	public  function setcosto($valor){
 		$this->_costo=$valor;
 	}
-	public  function simagen($valor){
+	public  function setimagen($valor){
 		$this->_imagen=$valor;
 	}
-	public  function sidcategoria($valor){
+	public  function setidcategoria($valor){
 		$this->_idcategoria=$valor;
 	}
-	public  function sest($valor){
+	public  function setest($valor){
 		$this->_est=$valor;
 	}
 }

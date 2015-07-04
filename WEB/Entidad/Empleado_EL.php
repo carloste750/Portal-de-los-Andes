@@ -15,7 +15,6 @@ class Empleado_EL
 	private $_email;
 	private $_usuario;
 	private $_contrasenia;
-	private $_idsucursal;
 	private $_idtipoempleado;
 	private $_est;
 	//Constructor
@@ -25,79 +24,73 @@ class Empleado_EL
 	}
 	
 	//Metodos GET y SET
-	public  function idempleado(){
+	public  function getidempleado(){
 		return $this->_idempleado;
 	}
-	public  function nombre(){
+	public  function getnombre(){
 		return $this->_nombre;
 	}
-	public  function apellido(){
+	public  function getapellido(){
 		return $this->_apellido;
 	}
-	public  function dni(){
+	public  function getdni(){
 		return $this->_dni;
 	}
-	public  function direccion(){
+	public  function getdireccion(){
 		return $this->_direccion;
 	}
-	public  function telefono(){
+	public  function gettelefono(){
 		return $this->_telefono;
 	}
-	public  function email(){
+	public  function getemail(){
 		return $this->_email;
 	}
-	public  function usuario(){
+	public  function getusuario(){
 		return $this->_usuario;
 	}
-	public  function contrasenia(){
+	public  function getcontrasenia(){
 		return $this->_contrasenia;
 	}
-	public  function idsucursal(){
-		return $this->_idsucursal;
-	}
-	public  function idtipoempleado(){
+	public  function getidtipoempleado(){
 		return $this->_idtipoempleado;
 	}
-	public  function est(){
+	public  function getest(){
 		return $this->_est;
 	}
 
 
 
-	public  function sidempleado($valor){
+	public  function setidempleado($valor){
 		$this->_idempleado=$valor;
 	}
-	public  function snombre($valor){
+	public  function setnombre($valor){
 		$this->_nombre=$valor;
 	}
-	public  function sapellido($valor){
+	public  function setapellido($valor){
 		$this->_apellido=$valor;
 	}
-	public  function sdni($valor){
+	public  function setdni($valor){
 		$this->_dni=$valor;
 	}
-	public  function sdireccion($valor){
+	public  function setdireccion($valor){
 		$this->_direccion=$valor;
 	}
-	public  function stelefono($valor){
+	public  function settelefono($valor){
 		$this->_telefono=$valor;
 	}
-	public  function semail($valor){
+	public  function setemail($valor){
 		$this->_email=$valor;
 	}
-	public  function susuario($valor){
+	public  function setusuario($valor){
 		$this->_usuario=$valor;
 	}
-	public  function scontrasenia($valor){
+	public  function setcontrasenia($valor){
 		$this->_contrasenia=$valor;
 	}
-	public  function sidsucursal($valor){
-		$this->_idsucursal=$valor;
-	}
-	public  function sidtipoempleado($valor){
+	public  function setidtipoempleado($valor){
 		$this->_idtipoempleado=$valor;
 	}
-	public  function sest($valor){
+	public  function setest($valor){
 		$this->_est=$valor;
 	}
 	

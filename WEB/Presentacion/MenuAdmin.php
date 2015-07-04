@@ -8,63 +8,30 @@
 		<br>
 		<div>
 			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
-				<h2 class="btn-success">Reservacion</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
+				<h2 class="btn-success " >Reservacion</h2>
+				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">+ Nuevo</a>
 				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
 				<hr>
 			</div>
 			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
 				<h2 class="btn-success">Carta</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">+ Nuevo</a>
 				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
 				<hr>
 			</div>
 			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
 				<h2 class="btn-success">Plato</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
-				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
+				<a  class="btn-success fuente-Contenido" href="NuevoPlato.php">+ Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarPlato.php?accion=all">Listar</a>
 				<hr>
 			</div>
-			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
-				<h2 class="btn-success">Categoria</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php?mensaje=">Nuevo</a>
-				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
-				<hr>
-			</div>
-			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
-				<h2 class="btn-success">Cliente</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">Nuevo</a>
-				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
-				<hr>
-			</div>
-
-			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
-				<h2 class="btn-success">Sucursal</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoSucursal.php">Nuevo</a>
-				<a  class="btn-success fuente-Contenido" href="ListarSucursal.php?accion=all">Listar</a>
-				<hr>
-			</div>
-
 			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
 				<h2 class="btn-success">Empleado</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoEmpleado.php?mensaje=&accion=all">Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="NuevoEmpleado.php?mensaje=&accion=all">+ Nuevo</a>
 				<a  class="btn-success fuente-Contenido" href="ListarEmpleado.php?accion=all">Listar</a>
 				<hr>
 			</div>
-			
-			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
-				<h2 class="btn-success">Nivel de Acceso</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoNivelAcceso.php?mensaje=&accion=all">Nuevo</a>
-				<a  class="btn-success fuente-Contenido" href="ListarNivelAcceso.php?accion=all">Listar</a>
-				<hr>
-			</div>
 
-			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
-				<h2 class="btn-success">Tipo de Empleado</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoTipoEmpleado.php?mensaje=&accion=all">Nuevo</a>
-				<a  class="btn-success fuente-Contenido" href="ListarTipoEmpleado.php?accion=all">Listar</a>
-				<hr>
-			</div>
 
 			
 

@@ -41,7 +41,6 @@
 			$campoid="idPlatoReservacion";
 			$campoest="est_PlatoReservacion";
 			return $this->GD->EliminarDatos($entidad,$campoid,$campoest,$id);
-
 		}
 		public function Lista_PlatoReservacion($Criterio){
 			$entidad="PlatoReservacion";

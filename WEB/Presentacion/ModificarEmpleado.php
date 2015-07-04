@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php 
 	include_once '../Negocio/TipoEmpleado_BL.php';
-	include_once '../Negocio/Sucursal_BL.php';
 	include_once '../Negocio/Empleado_BL.php';
 
 	$valores;
@@ -14,11 +13,7 @@
 	$OTipoEmpleado_BL=new TipoEmpleado_BL();
 	$valortem=$OTipoEmpleado_BL->ListaTipoEmpleado("");
 
-	$valorsuc;
-	$OSucursal_BL=new Sucursal_BL();
-	$valorsuc=$OSucursal_BL->ListaSucursal("");
 
-	desde
  ?>
 <html>
 	<?php include('./Templates/tmpHead.php') ?> 
@@ -31,7 +26,7 @@
 		<div class="registro">
 			<form action="../Negocio/Empleado_BL.php?accion=Modificar&id=<?=$_GET["id"] ?>" method="POST">
 				<div class="text-center form-gestion fuente5-n">
-					<h1 class="fondo-Plomo">Modificar TipoEmpleado: <?=$_GET["id"] ?></h1>
+					<h1 class="fondo-Plomo">Modificar El Empleado: <?=$_GET["id"] ?></h1>
 					<table border="0" class="centrar ">
 						<tr>
 							<td class="text-right">Nombre:</td>
@@ -63,7 +58,7 @@
 						</tr>
 						<tr>
 							<td class="text-right">Contraseña:</td>
-							<td class="text-left"><input name="txtContrasenia" type="password" placeholder="Ingrese contraseña" size="48"></td>
+							<td class="text-left"><input name="txtContrasenia" value="<?=$fila["contraseña_empleado"] ?>" type="password" placeholder="Ingrese contraseña" size="48"></td>
 						</tr>
 						<tr>
 							<td class="text-right">Tipo de Empleado:</td>
@@ -75,16 +70,7 @@
 								</SELECT>
 							</td>
 						</tr>
-						<tr>
-							<td class="text-right">Sucursal:</td>
-							<td class="text-left">
-								<SELECT name="lstSucursal">
-									<?php while($fila=mysql_fetch_array($valorsuc)){ ?>
-										<option value="<?=$fila["idsucursal"] ?>"><?=$fila["direccion_Sucursal"] ?></option>
-									<?php } ?>
-								</SELECT>
-							</td>
-						</tr>
+						
 					</table>
 					<br>
 					<input class="btn-success" name="btnAccion" type="submit" value="Actualizar">

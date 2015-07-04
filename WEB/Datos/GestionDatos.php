@@ -25,7 +25,7 @@
 
 		public function GrabarDatos($entidad,$campos,$atributos){
 			$res=mysql_query("insert into $entidad($campos) values ($atributos)");
-			/*print("insert into $entidad($campos) values ($atributos)");
+			print("insert into $entidad($campos) values ($atributos)");
 			/*if ($res=1){
 				echo "Guardado Correctamente";
 			}else{
@@ -44,11 +44,11 @@
 		public function EliminarDatos($entidad,$campoid,$campoest,$id){
 			$res=mysql_query("update  $entidad set $campoest=0 where $campoid='$id'");
 			print("update  $entidad set $campoest='0' where $campoid='$id'");
-			if ($res=1){
+			/*if ($res=1){
 				echo "Eliminado Correctamente";
 			}else{
 				echo "No se pudo Eliminar";
-			}
+			}*/
 		}
 		/*la siguiente funcion permite realizar un eliminado con codigo personalizado*/
 		public function EliminarDatosPers($entidad,$campoid,$campoest,$condicion){

@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<?php 
-		include_once '../Negocio/NivelAcceso_BL.php';
 		include('./Templates/tmpHead.php'); 
-
-		$mensaje=$_GET["mensaje"];	
-		$valores;
-		$ONivelAcceso_BL=new NivelAcceso_BL();
-		$valores=$ONivelAcceso_BL->ListaNivelAcceso("");
 	?> 
 <body class="container fuente1">
 	
@@ -26,16 +20,6 @@
 						<tr>
 							<td class="text-right">TipoEmpleado:</td>
 							<td class="text-left"><input name="txtDescripcion" type="text" placeholder="Ej. Administrador." size="25"></td>
-						</tr>
-						<tr>
-							<td class="text-right">Nivel de Acceso:</td>
-							<td class="text-left">
-								<SELECT name="lstNivel">
-									<?php while($fila=mysql_fetch_array($valores)){ ?>
-										<option value="<?=$fila["idNivel"] ?>"><?=$fila["nombre_Nivel"] ?></option>
-									<?php } ?>
-								</SELECT>
-							</td>
 						</tr>
 					</table>
 					<br>

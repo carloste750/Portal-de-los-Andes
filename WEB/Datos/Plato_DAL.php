@@ -18,13 +18,13 @@
 				descripcion_Plato,
 				costo_Plato,
 				imagen_Plato,
-				idcategoria"
+				categoria_idcategoria"
 			;
-			$atributos="'".$valor->nombre()."',
-				'".$valor->descripcion()."',
-				'".$valor->costo()."',
-				'".$valor->imagen()."',
-				'".$valor->idcategoria()."'
+			$atributos="'".$valor->getnombre()."',
+				'".$valor->getdescripcion()."',
+				'".$valor->getcosto()."',
+				'".$valor->getimagen()."',
+				'".$valor->getidcategoria()."'
 				"
 			;
 			return $this->GD->GrabarDatos($entidad,$campos,$atributos);
@@ -32,12 +32,12 @@
 		}
 		public function Modificar_Plato($valor){
 			$entidad="Plato";
-			$condicion="idPlato='".$valor->idPlato()."'";
-			$campos="nombre_Plato='".$valor->nombre()."',".
-					"descripcion_Plato='".$valor->descripcion()."',".
-					"costo_Plato='".$valor->costo()."',".
-					"imagen_Plato='".$valor->imagen()."',".
-					"idcategoria='".$valor->idcategoria()."'"
+			$condicion="idPlato='".$valor->getidPlato()."'";
+			$campos="nombre_Plato='".$valor->getnombre()."',".
+					"descripcion_Plato='".$valor->getdescripcion()."',".
+					"costo_Plato='".$valor->getcosto()."',".
+					"imagen_Plato='".$valor->getimagen()."',".
+					"categoria_idcategoria='".$valor->getidcategoria()."'"
 			;
 			return $this->GD->ModificarDatos($entidad,$campos,$condicion);
 
@@ -51,12 +51,12 @@
 		}
 		public function Lista_Plato($Criterio){
 			$entidad="Plato";
-			$campos="nombre_Plato,
+			$campos="idplato,nombre_Plato,
 				descripcion_Plato,
 				costo_Plato,
 				imagen_Plato,
-				idcategoria";
-			$camposfiltro="nombre_Plato,descripcion_Plato,costo_Plato";
+				categoria_idcategoria";
+			$camposfiltro="nombre_Plato or descripcion_Plato or costo_Plato";
 			$nestado="est_Plato";
 			return $this->GD->ListarDatosBusqueda($entidad,$campos,$camposfiltro,$Criterio,$nestado);
 		}

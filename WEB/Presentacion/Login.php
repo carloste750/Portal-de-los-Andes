@@ -1,3 +1,4 @@
+<?php include('./Templates/tmpSession.tpl.php') ?> 
 <!DOCTYPE html>
 <html>
 	<?php include('./Templates/tmpHead.php') ?> 

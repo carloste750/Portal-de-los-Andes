@@ -4,10 +4,10 @@
 	*/
 	class GestionDatos 
 	{
-		var $hostname;
-		var $base;
-		var $usuario;
-		var $contraseña;
+		private $hostname;
+		private $base;
+		private $usuario;
+		private $contraseña;
 
 		function __construct()
 		{
@@ -25,7 +25,7 @@
 
 		public function GrabarDatos($entidad,$campos,$atributos){
 			$res=mysql_query("insert into $entidad($campos) values ($atributos)");
-			print("insert into $entidad($campos) values ($atributos)");
+			/*print("insert into $entidad($campos) values ($atributos)");
 			/*if ($res=1){
 				echo "Guardado Correctamente";
 			}else{
@@ -64,12 +64,25 @@
 			echo "select $campos from $entidad where $camposfiltro like '%$criterio%'";
 			return mysql_query("select $campos from $entidad where $camposfiltro like '%$criterio%' and $nestado='1'");
 		}
+
 		public function ListarDatosBusquedaNoEstado($entidad,$campos,$camposfiltro,$criterio){
 			return mysql_query("select $campos from $entidad where $camposfiltro like '%$criterio%'");
 		}
+		/*Coleccion=requiere nombre de entidad, nombre de campo a comparar y valor de campo*/
 		public function Obtener($tabla,$campo,$id){
-			echo "select * from $tabla   where $campo =$id";
+			//echo "select * from $tabla  where $campo =$id";
 			return mysql_query("select *  from $tabla  where $campo =$id ");
+		}
+
+		public function Obtener_Datos_Usuario($campos,$entidad,$nameuser,$user){
+			echo "select $campos from $entidad  where $nameuser='$user'";
+			return mysql_query("select $campos from $entidad  where $nameuser='$user'");
+		}
+		/*Entero=retorna el valor de coincidencias desde una entidad con una cuenta y contraseña*/
+		public function Verificar($entidad,$nameuser,$namepassword,$user,$password){
+			/*echo ""select count($nameuser) from $entidad where $nameuser='$user' and $namepassword='$password'";*/
+			//print("select count($nameuser) from $entidad where $nameuser='$user' and $namepassword='$password'");
+			return (int)mysql_query("select count($nameuser) from $entidad where $nameuser='$user' and $namepassword='$password'");
 
 		}
 	}

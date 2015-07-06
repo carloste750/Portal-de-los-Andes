@@ -1,3 +1,4 @@
+<?php include('./Templates/tmpSession.tpl.php') ?> 
 <!DOCTYPE html>
 <?php 
 	include_once '../Negocio/TipoEmpleado_BL.php';

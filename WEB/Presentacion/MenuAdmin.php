@@ -1,3 +1,4 @@
+<?php include('./Templates/tmpSession.tpl.php') ?> 
 <!DOCTYPE html>
 <html>
 	<?php include('./Templates/tmpHead.php') ?> 
@@ -15,8 +16,8 @@
 			</div>
 			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
 				<h2 class="btn-success">Carta</h2>
-				<a  class="btn-success fuente-Contenido" href="NuevoCategoria.php">+ Nuevo</a>
-				<a  class="btn-success fuente-Contenido" href="ListarCategoria.php?accion=all">Listar</a>
+				<a  class="btn-success fuente-Contenido" href="NuevoCarta.php">+ Nuevo</a>
+				<a  class="btn-success fuente-Contenido" href="ListarCarta.php?accion=all">Listar</a>
 				<hr>
 			</div>
 			<div class="fuente5 col-md-3 col-lg-3 col-xm-3 col-sm-3">
@@ -31,10 +32,6 @@
 				<a  class="btn-success fuente-Contenido" href="ListarEmpleado.php?accion=all">Listar</a>
 				<hr>
 			</div>
-
-
-			
-
 		</div>
 	</content>
 

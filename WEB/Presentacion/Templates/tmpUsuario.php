@@ -1,13 +1,22 @@
 <?php 
-	/*session_start();
-	if($_SESSION["usuario"]){
-		?>
-		<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-		 	<a class="btn-success" href="LoginCliente.php">Ingresar</a>		
-		</div>
-		<?php
-	}else{
+	include_once '../Negocio/Sesion_BL.php';
+	$oSesion=new Sesion_BL();
+
+	if(isset($_SESSION["estado"])){
+		if(isset($_SESSION["estado"])==true){
+			?>
+			<h4 class="fuente5"><?=$_SESSION["nombre_cliente"]." "?><a  class="btn-success fuente5 fuente-Contenido" href="../Negocio/Sesion_BL.php?accion=logout">SALIR</a></h4>
 		
-	}*/
+			<?
+		}else{
+
+		}
+	}
+	if(!isset($_SESSION["estado"])){ 
+		?>
+		<a  class="btn-success fuente5 fuente-Contenido" href="LoginCliente.php?mensaje=&accion=all">INGRESAR</a>
+		<a  class="btn-success fuente5 fuente-Contenido" href="LoginCliente.php?mensaje=&accion=all">REGISTRARME</a>
+	<?php } 
+	
  ?>
  

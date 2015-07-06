@@ -1,3 +1,4 @@
+<?php include('./Templates/tmpSession.tpl.php') ?> 
 <?php 
 /**
 * Code by CJ

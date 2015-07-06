@@ -11,7 +11,7 @@ class Horario_EL
 	private $_descripcion;
 	private $_horainicio;
 	private $_horafin;
-	private $_est
+	private $_est;
 
 	//Constructor
 	function __construct()
@@ -20,42 +20,42 @@ class Horario_EL
 	}
 	
 	//Metodos GET y SET
-	public  function idhorario(){
+	public  function getidhorario(){
 		return $this->_idhorario;
 	}
-	public  function nombre(){
+	public  function getnombre(){
 		return $this->_nombre;
 	}
-	public  function descripcion(){
+	public  function getdescripcion(){
 		return $this->_descripcion;
 	}
-	public  function horainicio(){
+	public  function gethorainicio(){
 		return $this->_horainicio;
 	}
-	public  function horafin(){
+	public  function gethorafin(){
 		return $this->_horafin;
 	}
-	public  function est(){
+	public  function getest(){
 		return $this->_est;
 	}
 	
 
-	public  function sidhorario($valor){
+	public  function setidhorario($valor){
 		$this->_idhorario=$valor;
 	}
-	public  function snombre($valor){
+	public  function setnombre($valor){
 		$this->_nombre=$valor;
 	}
-	public  function sdescripcion($valor){
+	public  function setdescripcion($valor){
 		$this->_descripcion=$valor;
 	}
-	public  function shorainicio($valor){
+	public  function sethorainicio($valor){
 		$this->_horainicio=$valor;
 	}
-	public  function shorafin($valor){
+	public  function sethorafin($valor){
 		$this->_horafin=$valor;
 	}
-	public  function sest($valor){
+	public  function setest($valor){
 		$this->_est=$valor;
 	}
 	

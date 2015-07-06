@@ -1,3 +1,4 @@
+<?php include('./Templates/tmpSession.tpl.php') ?> 
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +7,6 @@
 <body class="container contenido fuente1">
 	
 	<?php include('./Templates/tmpHeader.php') ?> 
-
 	<content >
 		<div id="slide" class="carousel slide clearfix ">
 			<ol class="carousel-indicators">

@@ -13,17 +13,16 @@
 		}
 		public function Guardar_Horario($valor){
 			$entidad="Horario";
-
 			$campos="nombre_Horario,
 				descripcion_Horario,
 				horainicio_Horario,
 				horafin_Horario
 				"
 			;
-			$atributos="'".$valor->nombre()."',
-				'".$valor->descripcion()."',
-				'".$valor->horainicio()."',
-				'".$valor->horafin()."'
+			$atributos="'".$valor->getnombre()."',
+				'".$valor->getdescripcion()."',
+				'".$valor->gethorainicio()."',
+				'".$valor->gethorafin()."'
 				"
 			;
 			
@@ -32,11 +31,11 @@
 		}
 		public function Modificar_Horario($valor){
 			$entidad="Horario";
-			$condicion="idHorario='".$valor->idhorario()."'";
-			$campos="nombre_Horario='".$valor->nombre()."',".
-					"descripcion_Horario='".$valor->descripcion()."',".
-					"horainicio_Horario='".$valor->horainicio()."',".
-					"horafin_Horario='".$valor->horafin()."'"
+			$condicion="idHorario='".$valor->getidhorario()."'";
+			$campos="nombre_Horario='".$valor->getnombre()."',".
+					"descripcion_Horario='".$valor->getdescripcion()."',".
+					"horainicio_Horario='".$valor->gethorainicio()."',".
+					"horafin_Horario='".$valor->gethorafin()."'"
 			;
 			return $this->GD->ModificarDatos($entidad,$campos,$condicion);
 
@@ -50,12 +49,12 @@
 		}
 		public function Lista_Horario($Criterio){
 			$entidad="Horario";
-			$campos="nombre_Horario,
+			$campos="idhorario,nombre_Horario,
 				descripcion_Horario,
 				horainicio_Horario,
-				horafin_Horario,
+				horafin_Horario
 				";
-			$camposfiltro="nombre_Horario,descripcion_Horario";
+			$camposfiltro="nombre_Horario or descripcion_Horario";
 			$nestado="est_Horario";
 			return $this->GD->ListarDatosBusqueda($entidad,$campos,$camposfiltro,$Criterio,$nestado);
 		}

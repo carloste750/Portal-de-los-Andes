@@ -41,8 +41,38 @@
 								
 							</td>
 						</tr>
-						
 					</table>
+					<hr>
+					<table border="0" class="centrar" width="100%">
+						<tr class="row">
+							<td class="text-center" >
+								<small>Seleccione platos</small>
+								<div class="span4">
+									<select name="" id="" size="10">
+										<option>Plato1asdddddddd</option>
+										<option>Plato2</option>
+										<option>Plato3</option>
+									</select>
+								</div>
+								<button>Añadir >></button>
+							</td>
+							<td class="text-center">
+								<small>Platos En la Carta</small>
+								<div>
+									<select name="" id="" size="10">
+										<option>Plato1asdddddddd</option>
+										<option>Plato2</option>
+										<option>Plato3</option>
+									</select>
+								</div>
+							</td>
+							
+						</tr>
+						<tr>
+							
+						</tr>
+					</table>
+					<hr>
 					<br>
 					<input class="btn-success" name="btnAccion" type="submit" value="Grabar">
 					<input class="btn-success" name="btnLimpiar" type="reset" value="Limpiar">
@@ -57,7 +87,6 @@
 		<br>
 		
 	</content>
-	
 	<?php include('./Templates/tmpFooter.php') ?> 
 	
 </body>

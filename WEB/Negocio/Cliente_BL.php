@@ -85,20 +85,20 @@
 		public function VerificarCliente($user,$password){
 			/*Entero=Retorna 1 si el cliente existe y 0 si no existe*/
 			$res=$this->OClienteDAL->Verificar_Cliente($user,$password);
-	
+
 			if($res>=1){
 				/*Coleccion=retorna el nombre del cliente dado el nombre de usuario*/
 				session_start();
-				$valores=$this->OClienteDAL->Obtener_Datos_Cliente($user);
-				$fila=mysql_fetch_array($valores);
-				$nombre=$fila['nombre_cliente'];
-
+				/*Obtiene el nombre del cliente dado el username */
+				$nombre=$this->OClienteDAL->Obtener_Datos_Cliente($user);
+				
 				/*Estable datos de sesion*/
 				$this->EstablecerCliente($nombre,$user);
 				$this->EstablecerEstado(true);
 				header ("Location: ../Presentacion/Index.php");
-			}else if($res=0){
-				header ("Location: ../Presentacion/LoginCliente.php?mensaje=Usuario o Contraseña Invalidos");
+			}
+			if($res==0){
+				header ("Location: ../Presentacion/LoginCliente.php?mensaje=Error");
 			}
 		}
 

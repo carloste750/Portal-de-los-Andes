@@ -76,13 +76,17 @@
 
 		public function Obtener_Datos_Usuario($campos,$entidad,$nameuser,$user){
 			echo "select $campos from $entidad  where $nameuser='$user'";
-			return mysql_query("select $campos from $entidad  where $nameuser='$user'");
+			$result=mysql_query("select $campos from $entidad  where $nameuser='$user'");
+			$fila=mysql_fetch_array($result);
+			return $fila[0];
 		}
 		/*Entero=retorna el valor de coincidencias desde una entidad con una cuenta y contraseña*/
 		public function Verificar($entidad,$nameuser,$namepassword,$user,$password){
 			/*echo ""select count($nameuser) from $entidad where $nameuser='$user' and $namepassword='$password'";*/
-			//print("select count($nameuser) from $entidad where $nameuser='$user' and $namepassword='$password'");
-			return (int)mysql_query("select count($nameuser) from $entidad where $nameuser='$user' and $namepassword='$password'");
+			//print("select count($nameuser) as cant from $entidad where $nameuser='$user' and $namepassword='$password'");
+			$result=mysql_query("select count($nameuser) from $entidad where $nameuser='$user' and $namepassword='$password'");
+			$fila=mysql_fetch_array($result);
+			return (int)$fila[0];
 
 		}
 	}

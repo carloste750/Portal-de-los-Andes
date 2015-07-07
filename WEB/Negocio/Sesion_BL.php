@@ -22,6 +22,7 @@ class Sesion_BL
 	public function closesesion(){
 		session_start();
 		$_SESSION = array();
+		unset($_SESSION);
 		session_destroy();
 	}
 

@@ -79,7 +79,7 @@
 			$entidad="Cliente";
 			$campos="nombre_cliente";
 			$nameuser="usuario_cliente";
-			return $this->GD->Obtener($entidad,$campos,$nameuser,$user);
+			return $this->GD->Obtener_Datos_Usuario($campos,$entidad,$nameuser,$user);
 		}
 		public function Verificar_Cliente($valueuser,$valuepassword){
 			$entidad="cliente";
